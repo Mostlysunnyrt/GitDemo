@@ -78,4 +78,23 @@ public class eCommerce_tc_2 extends AndroidBaseTest{
 		
 			
 	}
+	@Test
+	public void FillForm_PositiveFlow1() throws InterruptedException
+
+	
+	{
+		
+		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Rahul Shetty");
+		driver.hideKeyboard();
+		System.out.println("change 6");
+		System.out.println("change 7");
+		driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
+		driver.findElement(By.id("android:id/text1")).click();
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Argentina']")).click();
+		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+		AssertJUnit.assertTrue(driver.findElements(By.xpath("(//android.widget.Toast)[1]")).size()<1);
+		
+			
+	}
 }
