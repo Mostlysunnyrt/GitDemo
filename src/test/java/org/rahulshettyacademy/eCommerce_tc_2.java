@@ -40,6 +40,9 @@ public class eCommerce_tc_2 extends AndroidBaseTest{
 		
 	//	driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Rahul Shetty");
 		driver.hideKeyboard();
+		driver.getTitle();
+		System.out.println("change 1");
+		System.out.println("change 2");
 		driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
 		driver.findElement(By.id("android:id/text1")).click();
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));
